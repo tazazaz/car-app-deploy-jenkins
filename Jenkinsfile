@@ -26,6 +26,7 @@ pipeline {
                dockerImage=docker.build(backendRegistry)
             }
         }
+    }
     
     stage ("push backend to docker hub") {
       steps {
@@ -54,6 +55,7 @@ pipeline {
                dockerImage=docker.build(frontendRegistry)
             }
         }
+    }
     
     stage ("push frontend to docker hub") {
       steps {
