@@ -9,4 +9,4 @@ services:
     image: manasaid1994/lbg-car-spring-app-started
     ports:
       - target: 8080
-        published: 80
+        published: 9000
