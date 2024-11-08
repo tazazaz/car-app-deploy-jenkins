@@ -6,6 +6,7 @@ pipeline {
     dockerImage = ""
     JAVA_BACKEND_REPO = 'https://github.com/tazazaz/lbg-car-spring-app-starter.git'
     REACT_FRONTEND_REPO = 'https://github.com/tazazaz/lbg-car-react-starter.git'
+    DEPLOYMENT_REPO = 'https://github.com/tazazaz/car-app-deploy-jenkins.git'
   }
   agent any
   stages {
@@ -76,8 +77,15 @@ pipeline {
       }
     }
 
+    stage('Checkout service deployment') {
+        steps {
+            script {
+                // Clone the Java backend repository
+                git branch: 'main', url: "${DEPLOYMENT_REPO}"
+            }
+        }
+    }
     
-
     stage("run services"){
       steps{
         script{
