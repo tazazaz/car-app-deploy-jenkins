@@ -2,11 +2,13 @@ version: "3.8"
 services:
   frontend:
     image: manasaid1994/lbg-car-react-starter
+    container_name: car-frontend-app
     ports:
     - target: 3000
       published: 3000
   backend:
     image: manasaid1994/lbg-car-spring-app-started
+    container_name: car-backend-app
     ports:
       - target: 8080
         published: 9000
