@@ -4,7 +4,7 @@ services:
     image: manasaid1994/lbg-car-react-starter
     ports:
     - target: 3000
-      published: 8081
+      published: 3000
   backend:
     image: manasaid1994/lbg-car-spring-app-started
     ports:
